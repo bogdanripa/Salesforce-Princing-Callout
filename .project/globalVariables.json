@@ -5,6 +5,22 @@
     "TypeFullyQualifiedName": "System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
     "UnresolvedTypeFullyQualifiedName": null,
     "Expression": "0",
-    "IsLiteral": true
+    "IsLiteral": false
+  },
+  {
+    "Constant": false,
+    "Name": "skus",
+    "TypeFullyQualifiedName": "System.Collections.Generic.IList`1[[Salesforce_SKUs.COE13589Pricebook, DataService.Salesforce_SKUs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": null,
+    "IsLiteral": false
+  },
+  {
+    "Constant": false,
+    "Name": "currency",
+    "TypeFullyQualifiedName": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": null,
+    "IsLiteral": false
   }
 ]

@@ -1,0 +1,88 @@
+﻿<!-- form
+{
+  "Metadata": {
+    "Id": "a3c26dfb-4447-46a0-9d15-ecbeff16dabb",
+    "DisplayName": "callout.html",
+    "Kind": "Html"
+  }
+}
+-->
+<html>
+    <head>
+        <style>
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            h1 {
+                font-size: 1.2em;
+            }
+            h2 {
+                font-size: 1.1em;
+            }
+            #description {
+                margin: 1em 0;
+            }
+            #close {
+                position: absolute;
+                right: 1em;
+                bottom: 0.6em;
+                padding: 0.4em 0.7em;
+            }
+        </style>
+        <script type="text/javascript">
+            var uiPathApi = {
+                getValue: function (elementId) {
+                    // this is a callback, being called from the workflow
+                    // enter your own code to get element values
+                    var el = document.getElementById(elementId);
+                    if (el.value == undefined) {
+                        return el.innerHTML;
+                    } else {
+                        if (el.checked == undefined) {
+                            return el.value;
+                        } else {
+                            return el.checked;
+                        }
+                    }
+                },
+        
+                setValue: function (elementId, value) {
+                    // this is a callback, being called from the workflow
+                    // enter your own code to set element values
+                    var el = document.getElementById(elementId);
+                    if (el.value == undefined) {
+                        el.innerHTML = value;
+                    } else {
+                        if (el.checked == undefined) {
+                            el.value = value;
+                        } else {
+                            el.checked = value;
+                        }
+                    }
+                },
+        
+                // Call this to trigger a "Form Message" event
+                // This function is set by the forms engine after the page loads,
+                // but declaring it here as empty helps with code autocompletion
+                sendMessage: function (id, value) { },
+            };
+        </script>
+    </head>
+    <body>
+        <h1 id="productName">Product Name</h1>
+        <h2 id="productCategory">Product Category</h2>
+        <div id="description">&nbsp;</div>
+        <div>
+            Price:
+            <span id="price">0.00</span>
+            <select id="currency" onchange="uiPathApi.sendMessage('currency', this.value)">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="gbp">GBP</option>
+                <option value="jpy">JPY</option>
+                <option value="inr">INR</option>
+            </select>
+        </div>
+        <input type="button" value="Close" id="close" onClick="uiPathApi.sendMessage('close')"/>
+    </body>
+</html>

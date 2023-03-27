@@ -1,0 +1,147 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="on_currency_changed" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="TriggerEventArgs" Type="InArgument(ufa:MessageTriggerEventArgs)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1874,1187</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>on_currency_changed_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Forms.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Forms.Activities.Base</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Studio.Forms.Runtime</x:String>
+      <x:String>Salesforce_SKUs</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Forms.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Forms.Runtime</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>DataService.Salesforce_SKUs</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="on_currency_changed" sap:VirtualizedContainerService.HintSize="559,884" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ufa:FormTriggerActivity x:TypeArguments="ufa:MessageTriggerEventArgs" Tag="{x:Null}" DisplayName="Form trigger activity" Enabled="True" Event="form.message" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="497,210" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_3" MessageId="currency" SchedulingMode="Concurrent" TriggerId="0695e941-b0e4-4ec0-be94-bb7997254ce1" />
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[TriggerEventArgs.Data]" sap:VirtualizedContainerService.HintSize="497,228" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <ufa:SetFormFieldsActivity x:Key="usd" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="334,140" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_1">
+        <ufa:SetFormFieldsActivity.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="price">[skus(0).USDPrice]</InArgument>
+        </ufa:SetFormFieldsActivity.Arguments>
+        <ufa:SetFormFieldsActivity.InstanceName>
+          <InArgument x:TypeArguments="x:String" />
+        </ufa:SetFormFieldsActivity.InstanceName>
+      </ufa:SetFormFieldsActivity>
+      <ufa:SetFormFieldsActivity x:Key="eur" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="334,140" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_2">
+        <ufa:SetFormFieldsActivity.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="price">[skus(0).EURPrice]</InArgument>
+        </ufa:SetFormFieldsActivity.Arguments>
+        <ufa:SetFormFieldsActivity.InstanceName>
+          <InArgument x:TypeArguments="x:String" />
+        </ufa:SetFormFieldsActivity.InstanceName>
+      </ufa:SetFormFieldsActivity>
+      <ufa:SetFormFieldsActivity x:Key="gbp" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="334,140" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_3">
+        <ufa:SetFormFieldsActivity.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="price">[skus(0).GBPPrice]</InArgument>
+        </ufa:SetFormFieldsActivity.Arguments>
+        <ufa:SetFormFieldsActivity.InstanceName>
+          <InArgument x:TypeArguments="x:String" />
+        </ufa:SetFormFieldsActivity.InstanceName>
+      </ufa:SetFormFieldsActivity>
+      <ufa:SetFormFieldsActivity x:Key="jpy" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="334,140" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_4">
+        <ufa:SetFormFieldsActivity.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="price">[skus(0).JPYPrice]</InArgument>
+        </ufa:SetFormFieldsActivity.Arguments>
+        <ufa:SetFormFieldsActivity.InstanceName>
+          <InArgument x:TypeArguments="x:String" />
+        </ufa:SetFormFieldsActivity.InstanceName>
+      </ufa:SetFormFieldsActivity>
+      <ufa:SetFormFieldsActivity x:Key="inr" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="334,140" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_5">
+        <ufa:SetFormFieldsActivity.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="price">[skus(0).INRPrice]</InArgument>
+        </ufa:SetFormFieldsActivity.Arguments>
+        <ufa:SetFormFieldsActivity.InstanceName>
+          <InArgument x:TypeArguments="x:String" />
+        </ufa:SetFormFieldsActivity.InstanceName>
+      </ufa:SetFormFieldsActivity>
+    </Switch>
+    <Assign sap:VirtualizedContainerService.HintSize="497,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[currency]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[TriggerEventArgs.Data]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="currency.txt" sap:VirtualizedContainerService.HintSize="497,133" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[currency]" />
+  </Sequence>
+</Activity>

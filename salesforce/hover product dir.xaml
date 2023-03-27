@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1109,641</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1749,1001</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>hover_product_dir_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -97,22 +97,20 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="hover_product_dir" sap:VirtualizedContainerService.HintSize="450,495" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="hover_product_dir" sap:VirtualizedContainerService.HintSize="450,496" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NNativeEventTrigger x:TypeArguments="uuat:WebMouseEventArgs" AvailableEventTypes="WebctrlTextChange,WebctrlKeyPress,WebctrlMouseClick,WebctrlMouseDoubleClick,WebctrlMouseRightClick,WebctrlMouseMove,WebctrlMousePressed,WebctrlMouseReleased,WebctrlMouseEntered,WebctrlMouseExited,WebctrlFocusGained,WebctrlFocusLost,ElementAppeared,ElementDisappeared" DisplayName="Application Event Trigger '*ABBYY -'" Enabled="True" EventType="WebctrlMouseEntered" sap:VirtualizedContainerService.HintSize="388,231" sap2010:WorkflowViewState.IdRef="NNativeEventTrigger`1_1" SchedulingMode="Concurrent" TriggerId="491e8b39-8254-46c6-bda0-58f576f1c30b" Version="V3">
+    <uix:NNativeEventTrigger x:TypeArguments="uuat:WebMouseEventArgs" AvailableEventTypes="WebctrlTextChange,WebctrlKeyPress,WebctrlMouseClick,WebctrlMouseDoubleClick,WebctrlMouseRightClick,WebctrlMouseMove,WebctrlMousePressed,WebctrlMouseReleased,WebctrlMouseEntered,WebctrlMouseExited,WebctrlFocusGained,WebctrlFocusLost,ElementAppeared,ElementDisappeared" DisplayName="Application Event Trigger '*ABBYY -'" Enabled="True" EventType="WebctrlMouseEntered" sap:VirtualizedContainerService.HintSize="388,232" sap2010:WorkflowViewState.IdRef="NNativeEventTrigger`1_1" SchedulingMode="Concurrent" TriggerId="491e8b39-8254-46c6-bda0-58f576f1c30b" Version="V3">
       <uix:NNativeEventTrigger.Target>
         <uix:TargetAnchorable BrowserURL="https://uipath.lightning.force.com/lightning/r/Opportunity/0065b00000tPhrmAAC/view" DesignTimeRectangle="1494, 130, 194, 18" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'*ABBYY -'" FullSelectorArgument="&lt;webctrl tag='A' href='^\/lightning\/r\/\w*\/view$' matching:href='regex' /&gt;" Guid="8e88762f-48ec-4ed4-b19d-eda56321319e" InformativeScreenshot="dfd3079d9c9f209739286c7cad9883d4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='* | Salesforce' /&gt;" SearchSteps="Selector" Version="V2" />
       </uix:NNativeEventTrigger.Target>
     </uix:NNativeEventTrigger>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="salesforce\show callout.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="salesforce\show callout.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="ui:UiElement" x:Key="el">
-          <VisualBasicValue x:TypeArguments="ui:UiElement" ExpressionText="TriggerEventArgs.TargetElement" />
-        </InArgument>
+        <InArgument x:TypeArguments="ui:UiElement" x:Key="el">[TriggerEventArgs.TargetElement]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

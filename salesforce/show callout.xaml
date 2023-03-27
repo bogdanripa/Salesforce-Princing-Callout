@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1749,2184</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1874,2455</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>show_callout_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,10 +110,9 @@
       <AssemblyReference>DataService.Salesforce_SKUs</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="show_callout" sap:VirtualizedContainerService.HintSize="704,2119" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="show_callout" sap:VirtualizedContainerService.HintSize="711,2390" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="currentIndex" />
-      <Variable x:TypeArguments="scg:IList(s:COE13589Pricebook)" Name="skus" />
       <Variable x:TypeArguments="x:String" Name="pName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -121,12 +120,12 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ufa:CloseFormActivity DisplayName="Close Form" FormId="6c2d91b9-ffc3-491a-807f-a0761c111be9" sap:VirtualizedContainerService.HintSize="642,89" sap2010:WorkflowViewState.IdRef="CloseFormActivity_1">
+    <ufa:CloseFormActivity DisplayName="Close Form" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="649,89" sap2010:WorkflowViewState.IdRef="CloseFormActivity_1">
       <ufa:CloseFormActivity.InstanceName>
         <InArgument x:TypeArguments="x:String" />
       </ufa:CloseFormActivity.InstanceName>
     </ufa:CloseFormActivity>
-    <Assign sap:VirtualizedContainerService.HintSize="642,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="649,82" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[calloutIndex]</OutArgument>
       </Assign.To>
@@ -134,7 +133,7 @@
         <InArgument x:TypeArguments="x:Int32">[calloutIndex+1]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="642,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="649,82" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[currentIndex]</OutArgument>
       </Assign.To>
@@ -142,8 +141,8 @@
         <InArgument x:TypeArguments="x:Int32">[calloutIndex]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="642,137" sap2010:WorkflowViewState.IdRef="NGetText_2" InUiElement="[el]" TextString="[pName]" Version="V3" />
-    <uda:QueryEntityRecords x:TypeArguments="s:COE13589Pricebook" ContinueOnError="False" DisplayName="Query COE13589Pricebook Records 13589" EntityId="b23f6e5e-f260-ed11-ade6-a04a5e724c11" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="642,140" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_2" OutputRecords="[skus]" QueriedEntityId="b23f6e5e-f260-ed11-ade6-a04a5e724c11" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
+    <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="649,137" sap2010:WorkflowViewState.IdRef="NGetText_2" InUiElement="[el]" TextString="[pName]" Version="V3" />
+    <uda:QueryEntityRecords x:TypeArguments="s:COE13589Pricebook" ContinueOnError="False" DisplayName="Query COE13589Pricebook Records 13589" EntityId="b23f6e5e-f260-ed11-ade6-a04a5e724c11" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="649,140" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_2" OutputRecords="[GlobalVariablesNamespace.GlobalVariables.skus]" QueriedEntityId="b23f6e5e-f260-ed11-ade6-a04a5e724c11" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
       <uda:QueryEntityRecords.FilterArguments>
         <uda:FilterArgument FilterActivityType="{x:Null}">
           <uda:FilterArgument.Filter>
@@ -169,23 +168,68 @@
         <OutArgument x:TypeArguments="x:Int64" />
       </uda:QueryEntityRecords.TotalRecords>
     </uda:QueryEntityRecords>
-    <If Condition="[currentIndex = calloutIndex]" sap:VirtualizedContainerService.HintSize="642,1278" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[currentIndex = calloutIndex]" sap:VirtualizedContainerService.HintSize="649,1549" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="608,1048" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap:VirtualizedContainerService.HintSize="615,1319" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[skus.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="566,960" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[skus.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="573,1231" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="532,630" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence sap:VirtualizedContainerService.HintSize="539,901" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="price" />
+                </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="490,542" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[currency]" sap:VirtualizedContainerService.HintSize="497,354" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                  <Assign x:Key="usd" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[price]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[skus(0).USDPrice]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign x:Key="eur" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[price]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[skus(0).EURPrice]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign x:Key="gbp" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[price]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[skus(0).GBPPrice]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign x:Key="jpy" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[price]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[skus(0).JPYPrice]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign x:Key="inr" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[price]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[skus(0).INRPrice]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Switch>
+                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="497,419" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,16 +237,13 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <uca:ShowCalloutActivity Left="{x:Null}" ShowInTaskbar="{x:Null}" ShowMargin="{x:Null}" Target="{x:Null}" Top="{x:Null}" TopMost="{x:Null}" WindowState="{x:Null}" DisplayName="Show Callout" FormId="6c2d91b9-ffc3-491a-807f-a0761c111be9" sap:VirtualizedContainerService.HintSize="334,191" sap2010:WorkflowViewState.IdRef="ShowCalloutActivity_1" IsAsync="True" UiElement="[el]">
+                    <uca:ShowCalloutActivity Left="{x:Null}" ShowInTaskbar="{x:Null}" Target="{x:Null}" Top="{x:Null}" TopMost="{x:Null}" WindowState="{x:Null}" DisplayName="Show Callout" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="334,191" sap2010:WorkflowViewState.IdRef="ShowCalloutActivity_1" IsAsync="True" UiElement="[el]">
                       <uca:ShowCalloutActivity.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="productName">[skus(0).ProductName]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="description">[skus(0).ProductDescription]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="productCategory">[skus(0).ProductCategory + " / " + skus(0).ProductFamily]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="USDPrice">[skus(0).USDPrice]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="EURPrice">[skus(0).EURPrice]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="GBPPrice">[skus(0).GBPPrice]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="JPYPrice">[skus(0).JPYPrice]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="INRPrice">[skus(0).INRPrice]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="productCategory">[skus(0).ProductFamily]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="currency">[currency]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="price">[price]</InArgument>
                       </uca:ShowCalloutActivity.Arguments>
                       <uca:ShowCalloutActivity.ContinueOnError>
                         <InArgument x:TypeArguments="x:Boolean" />
@@ -213,6 +254,11 @@
                       <uca:ShowCalloutActivity.InstanceName>
                         <InArgument x:TypeArguments="x:String" />
                       </uca:ShowCalloutActivity.InstanceName>
+                      <uca:ShowCalloutActivity.ShowMargin>
+                        <InArgument x:TypeArguments="s1:Nullable(x:Boolean)">
+                          <Literal x:TypeArguments="s1:Nullable(x:Boolean)" Value="False" />
+                        </InArgument>
+                      </uca:ShowCalloutActivity.ShowMargin>
                       <uca:ShowCalloutActivity.Title>
                         <InArgument x:TypeArguments="x:String" />
                       </uca:ShowCalloutActivity.Title>
@@ -222,10 +268,10 @@
                     </uca:ShowCalloutActivity>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="456,379" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                    <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>

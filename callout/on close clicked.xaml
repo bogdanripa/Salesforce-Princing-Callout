@@ -1,11 +1,11 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="continue" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="TriggerEventArgs" Type="InArgument(ufa:FormInfoTriggerEventArgs)" />
+    <x:Property Name="TriggerEventArgs" Type="InArgument(ufa:MessageTriggerEventArgs)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1189,827</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1749,1001</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>continue_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,18 +65,14 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="continue" sap:VirtualizedContainerService.HintSize="450,399" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="continue" sap:VirtualizedContainerService.HintSize="450,450" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ufa:FormTriggerActivity x:TypeArguments="ufa:FormInfoTriggerEventArgs" Tag="{x:Null}" DisplayName="Form trigger activity" Enabled="True" Event="click.submit" FormId="6c2d91b9-ffc3-491a-807f-a0761c111be9" sap:VirtualizedContainerService.HintSize="388,159" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_1" SchedulingMode="Concurrent" TriggerId="f82b6dec-1653-4e04-a2bc-a78e608d9c78">
-      <ufa:FormTriggerActivity.MessageId>
-        <InArgument x:TypeArguments="x:String" />
-      </ufa:FormTriggerActivity.MessageId>
-    </ufa:FormTriggerActivity>
-    <ufa:CloseFormActivity DisplayName="Close Form" FormId="6c2d91b9-ffc3-491a-807f-a0761c111be9" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="CloseFormActivity_1">
+    <ufa:FormTriggerActivity x:TypeArguments="ufa:MessageTriggerEventArgs" Tag="{x:Null}" DisplayName="Form trigger activity" Enabled="True" Event="form.message" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="388,210" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_2" MessageId="close" SchedulingMode="Concurrent" TriggerId="f82b6dec-1653-4e04-a2bc-a78e608d9c78" />
+    <ufa:CloseFormActivity DisplayName="Close Form" FormId="a3c26dfb-4447-46a0-9d15-ecbeff16dabb" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="CloseFormActivity_1">
       <ufa:CloseFormActivity.InstanceName>
         <InArgument x:TypeArguments="x:String" />
       </ufa:CloseFormActivity.InstanceName>
